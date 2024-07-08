@@ -1,0 +1,14 @@
+[Unit]
+Description=Bot Serivce
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/home/logistpr/acceptjoinbot
+ExecStart=/home/logistpr/acceptjoinbot/venv/bin/python app.py
+
+[Install]
+WantedBy=multi-user.target
