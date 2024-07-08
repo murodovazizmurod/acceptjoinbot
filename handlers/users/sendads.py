@@ -132,12 +132,14 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 await asyncio.sleep(e.timeout)
             except Exception as e:
                 print(e)
+                continue
             try:
                 await msg.edit_text(
                     message_to_sent
                 )
             except Exception as e:
                 print(e)
+                continue
     elif ads_type == "photo":
         file_id = data.get("file_id")
         caption = data.get("caption")
@@ -158,6 +160,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 await asyncio.sleep(e.timeout)
             except Exception as e:
                 print(e)
+                continue
 
             try:
                 await msg.edit_text(
@@ -165,6 +168,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 )
             except Exception as e:
                 print(e)
+                continue
     elif ads_type == "video":
         file_id = data.get("file_id")
         caption = data.get("caption")
@@ -185,6 +189,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 await asyncio.sleep(e.timeout)
             except Exception as e:
                 print(e)
+                continue
 
             try:
                 await msg.edit_text(
@@ -192,6 +197,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 )
             except Exception as e:
                 print(e)
+                continue
     elif ads_type == "audio":
         file_id = data.get("file_id")
         caption = data.get("caption")
@@ -212,6 +218,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 await asyncio.sleep(e.timeout)
             except Exception as e:
                 print(e)
+                continue
 
             try:
                 await msg.edit_text(
@@ -219,6 +226,7 @@ async def admin_confirm_message(call: types.CallbackQuery, state: FSMContext):
                 )
             except Exception as e:
                 print(e)
+                continue
     await call.message.answer(
         text=f"Xabaringiz {sent} ta foydalanuvchiga yuborildi."
     )

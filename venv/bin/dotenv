@@ -1,4 +1,4 @@
-#!/root/auth/venv/bin/python3.8
+#!/home/azizmurod/Projects/acceptjoin/acceptjoinbot/venv/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys
